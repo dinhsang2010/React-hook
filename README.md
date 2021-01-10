@@ -68,3 +68,29 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+<!-- useState() 
+    - is hook basic
+    - function component
+    - input : initailState
+    - output : a array two element " const [name,setName]= useState('my name')"
+    - array destructoring syntax
+    + const [a,b] = ['a','b']
+    + function useState(initialState){
+        return [state,setState]
+    }
+    function ColorBox(){
+        const [color,setColor] = useState('pink');
+        reutnr ...;
+    }
+    - useState() use REPLACING instead of MERGING
+    + // setState() in class component: MERGING
+        this.state={name: 'a', color:'red'}
+        this.setState({color:'green'})=>{name: 'a', color:'green'} 
+    + // setState() in function component: REPLACING
+        const [person,setPerson]=useState({name:'a',color:'red'})
+        setPerson({color;'green'})=> {color:'green'}
+        ---Solution for function component---
+        const [person,setPerson]=useState({name:'a',color:'green'})
+        setPerson=({...person,color:'green'})=> {name:'a',color:'green'}
+-->
